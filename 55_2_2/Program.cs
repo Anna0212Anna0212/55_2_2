@@ -42,6 +42,7 @@ namespace _55_2_2
             {
                 Console.WriteLine("error");
             }
+            Console.ReadKey();
         }
     }
 }
