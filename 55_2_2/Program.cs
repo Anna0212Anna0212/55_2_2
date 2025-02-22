@@ -8,7 +8,6 @@ namespace _55_2_2
 {
     internal class Program
     {
-        public static bool trfa = true;
         static void Main(string[] args)
         {
             try
@@ -61,34 +60,33 @@ namespace _55_2_2
                         }
                     }
                     Console.Write($"\n短除法：\n");
-                    int j = 2;
-                    for (int i = 2; i < min; i++)
+                    for (int i = 2; i <= min; i++)
                     {
-                        j = 2;
-                        trfa = true;
-                        do
+                        bool isPrime = true;
+                        int j = 2; // 由 2 開始判斷
+
+                        while (j * j <= i) // 檢查 i 是否為質數
                         {
-                            if (i % j == 0 || j >= i)
+                            if (i % j == 0)
                             {
-                                trfa = false;
+                                isPrime = false;
+                                break;
                             }
                             j++;
-                        } while (trfa);
-                        if (trfa)
+                        }
+
+                        if (isPrime) // 如果 i 是質數，才用來短除
                         {
                             while (min % i == 0 && max % i == 0)
                             {
-                                for(int k = 0; k < i; k++)
-                                {
-                                    Console.Write(" ");
-                                }
-                                Console.Write($"{min % i} | {max}  {min}");
-                                Console.Write("___________");
-                                min /= i;
+                                Console.WriteLine($"  {i} | {max}  {min}");
                                 max /= i;
+                                min /= i;
                             }
                         }
                     }
+
+                    Console.WriteLine($"    | {max}  {min}"); // 最後剩餘的數
                 }
             }
             catch
