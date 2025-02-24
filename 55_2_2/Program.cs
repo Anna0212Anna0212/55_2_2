@@ -35,7 +35,7 @@ namespace _55_2_2
                             break;
                         }
                     }
-                    Console.Write("\n公因數為：");
+                    Console.Write("\n因數為：");
                     for (int i = min; i > 0; i--)
                     {
                         if (max % i == 0 && min % i == 0)
@@ -43,7 +43,7 @@ namespace _55_2_2
                             Console.Write(i + " ");
                         }
                     }
-                    Console.Write($"\n{min}公因數為：");
+                    Console.Write($"\n{min}因數為：");
                     for (int i = min; i > 0; i--)
                     {
                         if (min % i == 0)
