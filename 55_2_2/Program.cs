@@ -79,14 +79,14 @@ namespace _55_2_2
                         {
                             while (min % i == 0 && max % i == 0)
                             {
-                                Console.WriteLine($"  {i} | {max}  {min}");
+                                Console.WriteLine($"{i} | {max} {min}");
                                 max /= i;
                                 min /= i;
                             }
                         }
                     }
 
-                    Console.WriteLine($"    | {max}  {min}"); // 最後剩餘的數
+                    Console.WriteLine($"  | {max} {min}"); // 最後剩餘的數
                 }
             }
             catch
